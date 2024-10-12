@@ -35,6 +35,7 @@ float humidity = 0; // Variable to store humidity value
   WiFi setup
 */
 static WiFiClient wifiClient; // Create a WiFi client object
+static PubSubClient mqttClient(wifiClient); // Create an MQTT client object
 
 /*
   Function to reconnect to the MQTT server if the connection is lost
